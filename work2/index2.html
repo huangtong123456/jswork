@@ -1,11 +1,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>对话框</title>
+        <script type="text/javascript">
+        function hehe(){
+            var xiaoming=prompt('小明说',"")
+            console.log('小明说：',xiaoming)
+        }
+        function lele(){
+            var xiaohong=prompt('小红说',"")
+            console.log('小红说:',xiaohong)
+        }
+        </script>
     </head>
     <body>
-        <script>
-            alert('桐锐的第一个网站')    
-        </script>
-        <a href="javascript:alert('Hello');">test</a>
+        <input type="button" onclick="hehe()" value="小明说" />
+        <input type="button" onclick="lele()" value="小红说" />
     </body>
 </html>
