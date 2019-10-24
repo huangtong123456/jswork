@@ -24,17 +24,18 @@ function showLog(logValues,showElement){
     }=logValues.next()
 
     for (const key in row){
+        //让字体变大
         let color = pos.indexOf(Number(key))> -1 ? 'color:red;':''
-        str += '<span style="font-size' + row[key] * 20 + 'px;' +
+        str += '<span style="font-size:' + row[key] * 20 + 'px;' +
             color +'">' + row[key] + '</span>'
     }
             showElement.innerHTML = str
         if(pos[0] != -1)
         setTimeout("showLog(logValues,showDiv)",500)
     }
-    //
-function insertSort(str){
-    let arr = str.split(',')
+    //插入排序
+function insertSort(str2){
+    let arr = str2.split(',')
     let sortLog = []
     for(let i = 1; i<arr.length ; i++){
         for(let j=i; j>0 ;j--){
@@ -51,7 +52,7 @@ function insertSort(str){
     return sortLog
 }
 function showLog(logValues,showElement){
-    let str =''
+    let str2 =''
     let {
         done,
         value: [row,pos]
@@ -59,10 +60,10 @@ function showLog(logValues,showElement){
 
     for (const key in row){
         let color = pos.indexOf(Number(key))> -1 ? 'color:red;':''
-        str += '<span style="font-size' + row[key] * 20 + 'px;' +
+        str2 += '<span style="font-size:' + row[key] * 20 + 'px;' +
             color +'">' + row[key] + '</span>'
     }
-            showElement.innerHTML = str
+            showElement.innerHTML = str2
         if(pos[0] != -1)
         setTimeout("showLog(logValues,showDiv)",500)
     }
